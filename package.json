@@ -5,7 +5,7 @@
     "main": "src/SeparateHTMLWebpackPlugin.js",
     "scripts": {
         "test": "exit 1",
-        "lint": "eslint --ext .js /",
+        "lint": "eslint --ext .js ./",
         "precommit": "lint-staged"
     },
     "lint-staged": {
