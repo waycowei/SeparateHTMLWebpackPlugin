@@ -1,7 +1,7 @@
 /**
  * @author wayco
  */
-const UtilBase = require('./UtilBase')
+const UtilBase = require('./util/UtilBase')
 
 class SeparateHTMLWebpackPlugin extends UtilBase {
     constructor (options) {

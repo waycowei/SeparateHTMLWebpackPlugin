@@ -4,7 +4,7 @@
  */
 class UtilBase {
     specifiedSuffix (link, type = 'js') {
-        let nameStr = '[a-zA-Z0-9]{0,50}';
+        let nameStr = '[a-zA-Z0-9]{0,50}'
         let typeReg = new RegExp(`${nameStr}\\.${type}(\\?${nameStr})?$`)
 
         return typeReg.test(link)
