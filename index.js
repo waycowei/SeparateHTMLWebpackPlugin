@@ -15,14 +15,14 @@ class SeparateHTMLWebpackPlugin extends UtilBase {
         if (!options) return false
         const optionsType = this.getType(options)
         const sortingOption = optionItem => {
-            let type = this.cssLstSorting(this.specifiedSuffix(optionItem, 'css'))
+            let type = SeparateHTMLWebpackPlugin.cssLstSorting(this.specifiedSuffix(optionItem, 'css'))
 
             this[type].push(optionItem)
         }
         const sortingDefaultOption = (option, type = 'js') => {
             let variable = option
             let variableType = this.getType(variable)
-            let arr = this.cssLstSorting(type === 'css')
+            let arr = SeparateHTMLWebpackPlugin.cssLstSorting(type === 'css')
 
             if (variableType === 'string') {
                 this[arr].push(this.addSuffix(variable, type))
@@ -49,7 +49,7 @@ class SeparateHTMLWebpackPlugin extends UtilBase {
         }
     }
 
-    cssLstSorting (cssReg) {
+    static cssLstSorting (cssReg) {
         return cssReg ? 'cssList' : 'jsList'
     }
 
@@ -59,7 +59,7 @@ class SeparateHTMLWebpackPlugin extends UtilBase {
                 let data = htmlPluginData
 
                 const separateReg = (item, type) => {
-                    let arr = this[this.cssLstSorting(type === 'css')]
+                    let arr = this[SeparateHTMLWebpackPlugin.cssLstSorting(type === 'css')]
 
                     for (let i in arr) {
                         let itemReg = new RegExp(arr[i])
