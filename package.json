@@ -2,7 +2,7 @@
     "name": "@wayco/separate-html-webpack-plugin",
     "version": "1.0.0",
     "description": "webpack plugin, prevent some link or script inserted to index.html",
-    "main": "src/SeparateHTMLWebpackPlugin.js",
+    "main": "index.js",
     "scripts": {
         "test": "exit 1",
         "lint": "eslint --ext .js ./",
