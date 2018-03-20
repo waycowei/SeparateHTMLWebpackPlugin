@@ -1,11 +1,11 @@
 /**
- * base util class
+ * base util
  * @author wayco
  */
 class UtilBase {
     specifiedSuffix (link, type = 'js') {
-        let nameStr = '[a-zA-Z0-9]{0,50}'
-        let typeReg = new RegExp(`${nameStr}\\.${type}(\\?${nameStr})?$`)
+        let validStr = '[a-zA-Z0-9]{0,50}'
+        let typeReg = new RegExp(`${validStr}\\.${type}(\\?${validStr})?$`)
 
         return typeReg.test(link)
     }
@@ -19,4 +19,4 @@ class UtilBase {
     }
 }
 
-module.export = UtilBase
+module.exports = UtilBase

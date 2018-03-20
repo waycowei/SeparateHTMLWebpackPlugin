@@ -55,7 +55,7 @@ class SeparateHTMLWebpackPlugin extends UtilBase {
 
     apply (compiler) {
         compiler.plugin('compilation', compliation => {
-            compliation.plugin('html-webapck-plugin-before-html-proessing', (htmlPluginData, callback) => {
+            compliation.plugin('html-webpack-plugin-before-html-processing', (htmlPluginData, callback) => {
                 let data = htmlPluginData
 
                 const separateReg = (item, type) => {
@@ -66,10 +66,8 @@ class SeparateHTMLWebpackPlugin extends UtilBase {
 
                         if (itemReg.test(item)) return false
                     }
-
                     return true
                 }
-
                 data.assets.js = data.assets.js.filter(item => separateReg(item, 'js'))
                 data.assets.css = data.assets.css.filter(item => separateReg(item, 'css'))
 

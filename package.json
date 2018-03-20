@@ -1,7 +1,7 @@
 {
     "name": "@wayco/separate-html-webpack-plugin",
-    "version": "1.0.1",
-    "description": "webpack plugin, prevent some link or script inserted to index.html",
+    "version": "1.0.2",
+    "description": "webpack plugin, prevent some link or script tags inserted to index.html",
     "main": "index.js",
     "scripts": {
         "test": "exit 1",
